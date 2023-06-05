@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const mongodbUrl = process.env.MONGODB_URL;
-mongoose.connect(mongodbUrl)
+mongoose.connect(mongodbUrl, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 const connection = mongoose.connection;
 connection.on('connected',()=>{
     console.log("mongodb connected successsfully to ",process.env.DB_NAME);

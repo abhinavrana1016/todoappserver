@@ -3,7 +3,7 @@ const express = require("express");
 const cookieParser = require("cookie-parser")
 const route = require("./routes/routes")
  const app = express()
-const port = process.env.PORT || 500
+const port = process.env.PORT || 5000
 app.listen(port,()=>{
     console.log("server is running on port",port);
 })
